@@ -1,0 +1,6 @@
+/nbproject/*
+/topcorner/application/config/database.php
+/topcorner/public/.htaccess
+*.DS_Store?
+*.DS_Store
+Thumbs.db

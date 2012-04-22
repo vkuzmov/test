@@ -1,0 +1,32 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+#Options -Indexes
+#Options -ExecCGI 
+#AddHandler cgi-script .php .php3 .php4 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi 
+
+
+# Installation directory
+RewriteBase /
+
+# Protect hidden files from being viewed
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+# For Spock cache
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+ExpiresActive Off
+</FilesMatch>
+
+# Put these files only when the project is in the public folder
+# Protect application and system files from being viewed
+#Change project_name to your project folder name
+#RewriteRule ^(?:project_name)\b.* index.php/$0 [L]
+
+# Allow any files or directories that exist to be displayed directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/URL
+RewriteRule .* index.php/$0 [PT]

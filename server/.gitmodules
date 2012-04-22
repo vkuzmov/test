@@ -1,0 +1,3 @@
+[submodule "kohana/3.2/system"]
+	path = kohana/3.2/system
+	url = https://sdipchikov@github.com/kohana/core.git
