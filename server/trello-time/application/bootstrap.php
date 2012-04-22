@@ -110,6 +110,8 @@ Kohana::modules(array(
 	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'kohana-cli'  => MODPATH.'kohana-cli',  // User guide and API documentation
+	'timestamped-migrations'  => MODPATH.'timestamped-migrations',  // Timestamped migrations for easy update of the instance DBs
 	// 'pagination'	=> MODPATH.'pagination'
 	));
 
@@ -127,8 +129,7 @@ Cookie::$salt = 'cvetino_djukati_akjsdhakjsndkjasd';
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
     ->defaults(array(
-	'directory' => 'frontend',
-	'controller' => 'main',
+	'controller' => 'api',
 	'action'     => 'index',
     ));
 

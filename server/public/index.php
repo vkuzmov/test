@@ -8,7 +8,7 @@ ini_set('display_errors', '1');
  *
  * @see  http://kohanaframework.org/guide/about.install#application
  */
-$application = '../project/application';
+$application = '../trello-time/application';
 
 /**
  * The directory in which your modules are located.
@@ -22,7 +22,7 @@ $modules = '../kohana/3.2/modules';
  *
  * @see  http://kohanaframework.org/guide/about.install#modules
  */
-$modules_project = '../project/modules';
+$modules_project = '../trello-time/modules';
 
 /**
  * The directory in which the Kohana resources are located. The system
@@ -30,7 +30,7 @@ $modules_project = '../project/modules';
  *
  * @see  http://kohanaframework.org/guide/about.install#system
  */
-$system = '../../../kohana/3.2/system';
+$system = '../kohana/3.2/system';
 
 /**
  * The default extension of resource files. If you change this, all resources
